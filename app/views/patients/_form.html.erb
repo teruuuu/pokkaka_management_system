@@ -29,5 +29,5 @@
     <%= form.label :key_person %>
     <%= form.text_field :key_person, required: true %>
   </p>
-  <%= form.submit "送信" %>
+  <%= form.submit "送信", data: { confirm: "この内容でよろしいですか？" } %>
 <% end %>

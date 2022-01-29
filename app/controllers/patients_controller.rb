@@ -17,7 +17,10 @@ class PatientsController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    @patient.update!(patient_params)
+    redirect_to @patient
+  end
 
   def destroy; end
 
