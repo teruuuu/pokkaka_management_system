@@ -3,6 +3,7 @@ ja:
     models:
       user: スタッフ
       patient: 利用者
+      information: 連絡事項
     attributes:
       user:
         name: 名前
@@ -14,6 +15,8 @@ ja:
         address: 住所
         degree_of_care: 要介護度
         key_person: 主介護者
+      information:
+        comment: 内容
   date:
     formats:
       default: '%Y年%m月%d日'
