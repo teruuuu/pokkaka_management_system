@@ -1,0 +1,17 @@
+<h2>連絡事項投稿</h2>
+<%= form_with(model:[@patient, Information.new], url: patient_informations_path(@patient)) do |f| %>
+  <p><%= f.text_area :comment, required: true, :size=>"50x5" %></p>
+  <%= f.submit "送信" %></p>
+<% end %>
+<hr>
+<h2>連絡事項一覧</h2>
+<% @informations.each do |information| %>
+  <div>
+    <%= l information.user.created_at %>
+    【投稿者】<%= information.user.name %>
+  </div>
+  <hr width="50%" align="left">
+  <% if current_user.id == information.user_id %>
+    <%= link_to "削除", patient_information_path(information.patient.id, information.id), method: :delete, data: { confirm: "削除しますか？" } %>
+  <% end %>
+<% end %>
