@@ -1,0 +1,33 @@
+<%= form_with model: @patient, local: true do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
+  </p>
+  <p>
+    <%= form.label :birthday %>
+    <%= form.date_select(
+             :birthday,
+             start_year: 1910,
+             end_year: 2000,
+             defoult: Date.new(1950, 1, 1),
+             required: true
+             ) %>
+  </p>
+  <p>
+    <%= form.label :gender %>
+    <%= form.text_field :gender, required: true %>
+  </p>
+  <p>
+    <%= form.label :address %>
+    <%= form.text_field :address, required: true %>
+  </p>
+  <p>
+    <%= form.label :degree_of_care %>
+    <%= form.text_field :degree_of_care, required: true %>
+  </p>
+  <p>
+    <%= form.label :key_person %>
+    <%= form.text_field :key_person, required: true %>
+  </p>
+  <%= form.submit "送信" %>
+<% end %>
