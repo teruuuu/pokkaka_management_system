@@ -1,6 +1,7 @@
 <% if user_signed_in? %>
   <%# ログイン時 %>
   <%= link_to "TOPページへ", root_path %>
+  <%= link_to 'マイページ', user_path(current_user.id) %>
   <%= link_to "スタッフ一覧", users_path %>
   <%= link_to "利用者一覧", patients_path %>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
