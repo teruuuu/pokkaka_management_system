@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <%# ログイン時 %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
+  <%= "【ログイン中のユーザー名】#{current_user.name}" %>
+<% else %>
+  <%# 非ログイン時 %>
+  <%= link_to "ログイン", new_user_session_path %>
+<% end %>
