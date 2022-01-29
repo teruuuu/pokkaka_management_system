@@ -1,6 +1,7 @@
 <h1>スタッフ一覧</h1>
 <% @users.each do |user| %>
-  <p>ID <%= user.id %></p>
-  <p>名前 <%= user.name %></p>
-  <p><%= link_to "詳細", user %></p>
+  <%= user.id %>
+  <%= user.name %>
+  <%= link_to "詳細", user %>
+  <p></p>
 <% end %>
