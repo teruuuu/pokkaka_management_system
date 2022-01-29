@@ -13,7 +13,10 @@ class PatientsController < ApplicationController
     redirect_to patient
   end
 
-  def show; end
+  def show
+    @information = Information.new
+    @informations = @patient.informations.includes(:user).order(created_at: :desc)
+  end
 
   def edit; end
 
