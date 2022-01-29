@@ -9,9 +9,10 @@
   <div>
     <%= l information.user.created_at %>
     【投稿者】<%= information.user.name %>
+    <p><%= simple_format(information.comment) %></p>
   </div>
-  <hr width="50%" align="left">
   <% if current_user.id == information.user_id %>
     <%= link_to "削除", patient_information_path(information.patient.id, information.id), method: :delete, data: { confirm: "削除しますか？" } %>
+    <hr width="50%" align="left">
   <% end %>
 <% end %>
