@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: スタッフ
+      patient: 利用者
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+      patient:
+        name: 名前
+        birthday: 生年月日
+        gender: 性別
+        address: 住所
+        degree_of_care: 要介護度
+        key_person: 主介護者
+  date:
+    formats:
+      default: '%Y年%m月%d日'
