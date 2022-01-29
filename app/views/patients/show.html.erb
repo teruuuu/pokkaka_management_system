@@ -1,2 +1,17 @@
-<h1>Patients#show</h1>
-<p>Find me in app/views/patients/show.html.erb</p>
+<h1>利用者情報詳細</h1>
+<p>【ID】 <%= @patient.id %></p>
+<p>【名前】 <%= @patient.name %></p>
+<p>【生年月日】 <%= l @patient.birthday %></p>
+<p>【年齢】
+  <% d1 = Date.today %>
+  <% d2 = @patient.birthday %>
+  <%= "#{d1.year - d2.year - (d1.month > d2.month || (d1.month == d2.month && d1.day >= d2.day) ? 0 : 1)}歳" %>
+</p>
+<p>【性別】 <%= @patient.gender %></p>
+<p>【住所】 <%= @patient.address %></p>
+<p>【要介護度】 <%= @patient.degree_of_care %></p>
+<p>【キーパーソン】 <%= @patient.key_person %></p>
+<p>
+  <%= link_to "編集", edit_patient_path(@patient) %>
+</p>
+<p><%= link_to "利用者一覧", patients_path %></p>

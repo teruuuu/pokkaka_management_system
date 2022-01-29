@@ -14,3 +14,6 @@ ja:
         address: 住所
         degree_of_care: 要介護度
         key_person: 主介護者
+  date:
+    formats:
+      default: '%Y年%m月%d日'
