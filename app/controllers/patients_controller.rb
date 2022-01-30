@@ -1,7 +1,7 @@
 class PatientsController < ApplicationController
   before_action :set_post, only: %i[show edit update]
   def index
-    @patients = Patient.all.includes(:user)
+    @patients = Patient.all.includes(:user).order(:id)
   end
 
   def new
