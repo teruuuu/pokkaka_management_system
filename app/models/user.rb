@@ -12,4 +12,6 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
     end
   end
+
+  validates :name, :password_confirmation, presence: true
 end
