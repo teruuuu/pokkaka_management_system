@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE admin_users RESTART IDENTITY CASCADE")
+
+admin_user1 = AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+admin_user2 = AdminUser.create!(email: "pokkapoka.admin@pokkapoka.com", password: "pokapoka2025", password_confirmation: "pokapoka2025")
 
 ActiveRecord::Base.connection.execute("TRUNCATE TABLE users RESTART IDENTITY CASCADE")
 ActiveRecord::Base.connection.execute("TRUNCATE TABLE patients RESTART IDENTITY CASCADE")
@@ -23,4 +27,3 @@ patient2 = user2.patients.create!(name: "鈴木幸子", birthday: "1956-01-15", 
 patient3 = user3.patients.create!(name: "高橋次郎", birthday: "1940-10-03", gender: "男", address: "那珂市", degree_of_care: "要介護1", key_person: "長女")
 
 puts "データの投入に成功しました！"
-AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
