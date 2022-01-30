@@ -4,6 +4,7 @@ ja:
       user: スタッフ
       patient: 利用者
       information: 連絡事項
+      time_frame: 時間帯
     attributes:
       user:
         name: 名前
@@ -17,6 +18,9 @@ ja:
         key_person: 主介護者
       information:
         comment: 内容
+      time_frame:
+        start_time: 開始時間
+        end_time: 終了時間
   date:
     formats:
       default: '%Y年%m月%d日'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_29_071612) do
+ActiveRecord::Schema.define(version: 2022_01_29_234340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2022_01_29_071612) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_patients_on_user_id"
+  end
+
+  create_table "time_frames", force: :cascade do |t|
+    t.time "start_time", null: false
+    t.time "end_time", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["start_time", "end_time"], name: "index_time_frames_on_start_time_and_end_time", unique: true
   end
 
   create_table "users", force: :cascade do |t|
