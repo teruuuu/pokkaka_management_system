@@ -1,5 +1,9 @@
-<%= "#{current_user.name}さん、今日もお疲れ様です！" %>
-<p><%= link_to 'マイページ', user_path(current_user.id), class: "btn btn-info w-25" %></p>
-<p><%= link_to "スタッフ一覧", users_path, class: "btn btn-success w-25" %></p>
-<p><%= link_to "利用者一覧", patients_path, class: "btn btn-primary w-25" %></p>
-<p><%= link_to "新規利用者登録", new_patient_path, class: "btn btn-danger w-25" %>
+<br>
+<h2 style="text-align:center"><%= "#{current_user.name}さん、今日もお疲れ様です！" %></h2>
+<br>
+<br>
+<br>
+<p><%= link_to 'マイページ', user_path(current_user.id), class: "btn btn-info btn-lg w-25" %></p>
+<p><%= link_to "スタッフ一覧", users_path, class: "btn btn-success btn-lg w-25" %></p>
+<p><%= link_to "利用者一覧", patients_path, class: "btn btn-primary btn-lg w-25" %></p>
+<p><%= link_to "新規利用者登録", new_patient_path, class: "btn btn-danger btn-lg w-25" %>

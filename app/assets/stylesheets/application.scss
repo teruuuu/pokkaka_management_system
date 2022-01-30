@@ -19,6 +19,9 @@ body {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+  background-image: image_url('himawari.bg.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 // ログイン画面タイトルのセンタリング
