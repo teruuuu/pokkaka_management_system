@@ -23,3 +23,4 @@ patient2 = user2.patients.create!(name: "鈴木幸子", birthday: "1956-01-15", 
 patient3 = user3.patients.create!(name: "高橋次郎", birthday: "1940-10-03", gender: "男", address: "那珂市", degree_of_care: "要介護1", key_person: "長女")
 
 puts "データの投入に成功しました！"
+AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
