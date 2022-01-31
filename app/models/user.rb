@@ -13,5 +13,5 @@ class User < ApplicationRecord
     end
   end
 
-  validates :name, :password_confirmation, presence: true
+  validates :name, presence: true
 end
