@@ -36,6 +36,7 @@ ja:
   time:
     formats:
       default: '%Y年 %m月%d日'
+      time_frame: '%H:%M'
   views:
     pagination:
       first: '&laquo; 最初'
