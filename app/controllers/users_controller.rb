@@ -7,6 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @time_frames = TimeFrame.all
+    @time_frames = TimeFrame.all.order(:start_time)
   end
 end
