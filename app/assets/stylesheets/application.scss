@@ -40,3 +40,23 @@ body {
 .center {
   text-align: center;
 }
+
+// 一覧表示idの横幅
+.id {
+  width: 100px;
+  height: 35px;
+}
+
+// 一覧表示nameの横幅
+.name {
+  width: 200px;
+}
+
+.other {
+  width: 150px;
+}
+
+// 下線
+.bottom {
+  border-bottom: 1px solid grey;
+}
