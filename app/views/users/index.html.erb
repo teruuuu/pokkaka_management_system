@@ -1,7 +1,19 @@
 <h1>スタッフ一覧</h1>
-<% @users.each do |user| %>
-  <%= user.id %>
-  <%= user.name %>
-  <%= link_to "詳細", user %>
-  <p></p>
-<% end %>
+<p></p>
+<table>
+  <tr class="bottom">
+    <th class="id">ID</th>
+    <th class="name">名前</th>
+    <th class="other"></th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td class="id"><%= user.id %></td>
+      <td class="name"><%= user.name %></td>
+      <td class="other"><%= link_to "詳細", user %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>
+<%= paginate @users %>

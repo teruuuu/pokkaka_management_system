@@ -1,6 +1,16 @@
-<div>
-  <%= patient.id %>
-  <%= patient.name %>
-  <%= link_to "詳細", patient %>
-  <%= link_to "編集", edit_patient_path(patient) %>
-</div>
+<table>
+  <tr class="bottom">
+    <th class="id">ID</th>
+    <th class="name">名前</th>
+    <th class="other"></th>
+  </tr>
+  <% @patients.each do |patient| %>
+    <tr>
+      <td class="id"><%= patient.id %></td>
+      <td class="name"><%= patient.name %></td>
+      <td class="other"><%= link_to "詳細", patient %>&nbsp;
+        <%= link_to "編集", edit_patient_path(patient) %>
+      </td>
+    </tr>
+  <% end %>
+</table>

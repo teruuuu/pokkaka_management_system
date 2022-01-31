@@ -324,6 +324,7 @@ DEPENDENCIES
   devise-bootstrap-views
   devise-i18n
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   pg (~> 1.1)
   pry-byebug

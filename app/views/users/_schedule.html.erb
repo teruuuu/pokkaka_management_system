@@ -1,0 +1,26 @@
+<table border=1 width=700 bgcolor=white>
+  <tr style="text-align:center">
+    <th></th>
+    <th>月</th>
+    <th>火</th>
+    <th>水</th>
+    <th>木</th>
+    <th>金</th>
+  </tr>
+  <% @time_frames.each do |time| %>
+    <tr height=70>
+      <th width=120 style="text-align:center">
+        <%= l time.start_time, format: :time_frame %>
+        <%= " - " %>
+        <%= l time.end_time, format: :time_frame %>
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<br>

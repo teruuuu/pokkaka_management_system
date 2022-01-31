@@ -1,18 +1,47 @@
 <h1>利用者情報詳細</h1>
-<p>【ID】 <%= @patient.id %></p>
-<p>【名前】 <%= @patient.name %></p>
-<p>【生年月日】 <%= l @patient.birthday %></p>
-<p>【年齢】
-  <% d1 = Date.today %>
-  <% d2 = @patient.birthday %>
-  <%= "#{d1.year - d2.year - (d1.month > d2.month || (d1.month == d2.month && d1.day >= d2.day) ? 0 : 1)}歳" %>
-</p>
-<p>【性別】 <%= @patient.gender %></p>
-<p>【住所】 <%= @patient.address %></p>
-<p>【要介護度】 <%= @patient.degree_of_care %></p>
-<p>【キーパーソン】 <%= @patient.key_person %></p>
-<p>
-  <%= link_to "編集", edit_patient_path(@patient) %>
-</p>
-<p><%= link_to "利用者一覧", patients_path %></p>
+<br>
+<table>
+  <tr>
+    <th class="show"><%= "【ID】" %></th>
+    <td><%= @patient.id %></td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【名前】" %></th>
+    <td><%= @patient.name %></td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【生年月日】" %>
+    </th>
+    <td><%= l @patient.birthday %></td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【年齢】" %></th>
+    <td>
+      <% d1 = Date.today %>
+      <% d2 = @patient.birthday %>
+      <%= "#{d1.year - d2.year - (d1.month > d2.month || (d1.month == d2.month && d1.day >= d2.day) ? 0 : 1)}歳" %>
+    </td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【性別】" %> </th>
+    <td><%= @patient.gender %></td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【住所】" %></th>
+    <td><%= @patient.address %></td>
+  </tr>
+  <tr>
+    <th class="show"><%= "【要介護度】" %></th>
+    <td><%= @patient.degree_of_care %></td>
+  </tr>
+  <tr>
+    <th class="show"> <%= "【主介護者】" %></th>
+    <td><%= @patient.key_person %></td>
+  </tr>
+</table>
+<%= link_to "編集", edit_patient_path(@patient) %>
+<br>
+<%= link_to "利用者一覧", patients_path %>
+<br>
+<br>
 <%= render "information" %>
