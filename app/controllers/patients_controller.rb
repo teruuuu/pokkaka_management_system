@@ -1,7 +1,10 @@
 class PatientsController < ApplicationController
   before_action :set_post, only: %i[show edit update]
+
+  PER_PAGE = 10
+
   def index
-    @patients = Patient.all.includes(:user).order(:id)
+    @patients = Patient.all.includes(:user).order(:id).page(params[:page]).per(PER_PAGE)
   end
 
   def new
