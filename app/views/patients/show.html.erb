@@ -2,33 +2,20 @@
 <br>
 <table>
   <tr>
-    <th class="show">
-      【ID】
-    </th>
-    <td>
-      <%= @patient.id %>
-    </td>
+    <th class="show"><%= "【ID】" %></th>
+    <td><%= @patient.id %></td>
   </tr>
   <tr>
-    <th class="show">
-      【名前】
-    </th>
-    <td>
-      <%= @patient.name %>
-    </td>
+    <th class="show"><%= "【名前】" %></th>
+    <td><%= @patient.name %></td>
   </tr>
   <tr>
-    <th class="show">
-      【生年月日】
+    <th class="show"><%= "【生年月日】" %>
     </th>
-    <td>
-      <%= l @patient.birthday %>
-    </td>
+    <td><%= l @patient.birthday %></td>
   </tr>
   <tr>
-    <th class="show">
-      【年齢】
-    </th>
+    <th class="show"><%= "【年齢】" %></th>
     <td>
       <% d1 = Date.today %>
       <% d2 = @patient.birthday %>
@@ -36,36 +23,20 @@
     </td>
   </tr>
   <tr>
-    <th class="show">
-      【性別】 
-    </th>
-    <td>
-      <%= @patient.gender %>
-    </td>
+    <th class="show"><%= "【性別】" %> </th>
+    <td><%= @patient.gender %></td>
   </tr>
   <tr>
-    <th class="show">
-      【住所】
-    </th>
-    <td>
-      <%= @patient.address %>
-    </td>
+    <th class="show"><%= "【住所】" %></th>
+    <td><%= @patient.address %></td>
   </tr>
   <tr>
-    <th class="show">
-      【要介護度】
-    </th>
-    <td>
-      <%= @patient.degree_of_care %>
-    </td>
+    <th class="show"><%= "【要介護度】" %></th>
+    <td><%= @patient.degree_of_care %></td>
   </tr>
   <tr>
-    <th class="show">
-      【主介護者】
-    </th>
-    <td>
-      <%= @patient.key_person %>
-    </td>
+    <th class="show"> <%= "【主介護者】" %></th>
+    <td><%= @patient.key_person %></td>
   </tr>
 </table>
 <%= link_to "編集", edit_patient_path(@patient) %>

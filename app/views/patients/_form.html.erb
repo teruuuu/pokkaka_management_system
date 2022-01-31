@@ -1,17 +1,11 @@
 <%= form_with model: @patient, local: true do |form| %>
   <table>
     <tr>
-      <th class="show">
-        <%= form.label :name %>
-      </th>
-      <td>
-        <%= form.text_field :name, required: true %>
-      </td>
+      <th class="show"><%= form.label :name %></th>
+      <td><%= form.text_field :name, required: true %></td>
     </tr>
     <tr>
-      <th class="show">
-        <%= form.label :birthday %>
-      </th>
+      <th class="show"><%= form.label :birthday %></th>
       <td>
         <%= form.date_select(
              :birthday,
@@ -23,36 +17,20 @@
       </td>
     </tr>
     <tr>
-      <th class="show">
-        <%= form.label :gender %>
-      </th>
-      <td>
-        <%= form.text_field :gender, required: true %>
-      </td>
+      <th class="show"><%= form.label :gender %></th>
+      <td><%= form.text_field :gender, required: true %></td>
     </tr>
     <tr>
-      <th class="show">
-        <%= form.label :address %>
-      </th>
-      <td>
-        <%= form.text_field :address, required: true %>
-      </td>
+      <th class="show"><%= form.label :address %></th>
+      <td><%= form.text_field :address, required: true %></td>
     </tr>
     <tr>
-      <th class="show">
-        <%= form.label :degree_of_care %>
-      </th>
-      <td>
-        <%= form.text_field :degree_of_care, required: true %>
-      </td>
+      <th class="show"><%= form.label :degree_of_care %></th>
+      <td><%= form.text_field :degree_of_care, required: true %></td>
     </tr>
     <tr>
-      <th class="show">
-        <%= form.label :key_person %>
-      </th>
-      <td>
-        <%= form.text_field :key_person, required: true %>
-      </td>
+      <th class="show"><%= form.label :key_person %></th>
+      <td><%= form.text_field :key_person, required: true %></td>
     </tr>
   </table>
   <br>
