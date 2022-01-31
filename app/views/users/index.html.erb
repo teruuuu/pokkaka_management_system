@@ -2,15 +2,15 @@
 <p></p>
 <table >
   <tr class="bottom">
-    <th class="id">id</th>
+    <th class="id">ID</th>
     <th class="name">名前</th>
     <th class="other"></th>
   </tr>
   <% @users.each do |user| %>
     <tr>
-      <th class="id"><%= user.id %></th>
-      <th class="name"><%= user.name %></th>
-      <th class="other"><%= link_to "詳細", user %></th>
+      <td class="id"><%= user.id %></td>
+      <td class="name"><%= user.name %></td>
+      <td class="other"><%= link_to "詳細", user %></td>
     </tr>
   <% end %>
 </table>
