@@ -1,24 +1,54 @@
-# README
+# 訪問介護ステーション管理アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリ概要
+訪問介護ステーションにおける、スタッフのスケジュール管理、利用者(患者)の連絡事項を投稿できるアプリです。
 
-Things you may want to cover:
 
-* Ruby version
+# URL
 
-* System dependencies
+ゲストログインボタンからゲストユーザーとしてログイン可能です。
 
-* Configuration
+# 作成背景
+### 理学療法士の友人の悩みを解決
+- スケジュール管理をホワイトボードで行なっているため、
+- 利用者についての連絡事項(コメント)
 
-* Database creation
 
-* Database initialization
+# このアプリで解決できること
+- 週間スケジュールがスタッフが、
+  - お
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# 機能一覧
 
-* Deployment instructions
+# 使用イメージ
+### ・トップページ
 
-* ...
+### ・マイページ(スケジュール投稿機能)
+
+###  工夫したこと
+- 一般的なカレンダーを利用せず、要望に合わせてオリジナルのスケジュール表を作成しました。
+- 時間帯の変更にも対応できるよう、繰り返し処理をしてスケジュール表は登録されている時間帯の分だけ昇順で表示されるようにしました。
+
+### ・スタッフ一覧ページ
+### ・利用者(患者さん)一覧ページ
+### ・利用者(患者さん)詳細ページ
+### 工夫したこと
+
+### ・管理画面
+
+### これから追加したい機能
+・利用者の医師の診断書を登録する機能
+・トップページに連絡事項の更新情報
+
+# 使用技術
+- 言語： Ruby(2.7.3)
+- フレームワーク： Ruby on Rails(6.1.4.4)
+- DB: PostgreSQL
+- インフラ: Heroku(ステージング環境 → 本番環境)
+- ソースコード管理: GitHub
+-　開発環境: MacOS/Visual Studio Code
+
+# ER図
+
+# 画面遷移図
